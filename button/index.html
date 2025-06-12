@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Button</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        p {
+            font-family: sans-serif;
+        }
+
+        button {
+            cursor: pointer;
+            width: 25%;
+            font-size: 4vh;
+            padding: 2%;
+            margin-top: 10%;
+        }
+
+        #presses {
+            font-size: larger;
+        }
+        
+        #message {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="presses">Button Presses: 0</p>
+    <button  id="button">Click Me</button>
+    <p id="message"></p>
+    <audio src="assets/noise.m4a" id="noise"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
