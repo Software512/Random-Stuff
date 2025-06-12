@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <title>Minecraft Skin Generator</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Minecraft Skin Generator</h1>
+    <canvas id="canvas" width="64" height="64"></canvas>
+    <br>
+    <Label for="color">Color: </Label><input type="checkbox" id="color" checked="true">
+    <br>
+    <button id="regenerate">Regenerate</button>
+    <br>
+    <a id="download" download="mc-skin.png"><button>Download</button></a>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        document.getElementById("regenerate").addEventListener("click", generate);
+        document.getElementById("color").addEventListener("input", generate);
+
+        function generate() {
+            var currentX = 0;
+            var currentY = 0;
+            var colored = document.getElementById("color").checked;
+
+
+            for (let i = 0; i < 8; i++) {
+                currentX = 8;
+                for (let j = 0; j < 16; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++;
+                }
+                currentY++;
+            }
+
+            for (let i = 0; i < 8; i++) {
+                currentX = 0;
+                for (let j = 0; j < 32; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentY++;
+            }
+
+            for (let i = 0; i < 4; i++) {
+                currentX = 4;
+                for (let j = 0; j < 8; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentX += 8;
+                for (let j = 0; j < 16; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentX += 8;
+                for (let j = 0; j < 8; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentY++;
+            }
+
+            for (let i = 0; i < 12; i++) {
+                currentX = 0;
+                for (let j = 0; j < 56; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++;
+                }
+                currentY++;
+            }
+
+            currentY = 48;
+
+            for (let i = 0; i < 4; i++) {
+                currentX = 20;
+                for (let j = 0; j < 8; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentX += 8;
+                for (let j = 0; j < 8; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++
+                }
+                currentY++;
+            }
+
+            for (let i = 0; i < 16; i++) {
+                currentX = 16;
+                for (let j = 0; j < 32; j++) {
+                    setPixel(currentX, currentY);
+                    currentX++;
+                }
+                currentY++;
+            }
+
+            function setPixel(x, y) {
+                if (colored) {
+                    ctx.fillStyle = "rgb(" + Math.round(Math.random() * 255) + ", " + Math.round(Math.random() * 255) + ", " + Math.round(Math.random() * 255) + ")";
+                } else {
+                    let color = Math.round(Math.random() * 255);
+                    ctx.fillStyle = "rgb(" + color + ", " + color + ", " + color + ")";
+                }
+                ctx.fillRect(x, y, 1, 1);
+            }
+
+            document.getElementById("download").href = canvas.toDataURL("image/png");
+        }
+
+        generate();
+    </script>
+</body>
+
+</html>
