@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "MiniBrowser",
+    "description": "Adds a stripped down browser to the side panel.",
+    "version": "0.0",
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "permissions": [
+        "sidePanel"
+    ]
+  }
