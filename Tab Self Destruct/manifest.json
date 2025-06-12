@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Self Destruct",
+    "description": "Lets you set a timer for a tab and will close the tab when the timer ends.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "bomb.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

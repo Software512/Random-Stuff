@@ -1,0 +1,48 @@
+body {
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    height: 25px;
+    width: 25px;
+    border: none;
+    margin: 5px;
+    background-color: silver;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: whitesmoke;
+}
+
+button {
+    background-color: lightgray;
+}
+
+#clear, #pm, #percent, #divide, #times, #minus, #plus, #equal {
+    background-color: dimgray;
+}
+
+#clear:hover, #pm:hover, #percent:hover, #divide:hover, #times:hover, #minus:hover, #plus:hover, #equal:hover {
+    background-color: gray;
+}
+
+#clear:active, #pm:active, #percent:active, #divide:active, #times:active, #minus:active, #plus:active, #equal:active {
+    background-color: darkgray;
+}
+
+#screen {
+    width: 150px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#zero {
+    width: 63px;
+}
+
+#clear {
+    padding: 0;
+}
