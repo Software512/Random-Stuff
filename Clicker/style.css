@@ -1,0 +1,183 @@
+body {
+  background-color: lightblue;
+}
+
+button {
+  cursor: pointer;
+  color: black;
+}
+
+.Guy {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.mps {
+  font-family: monospace;
+  position: fixed;
+  top: 10%;
+}
+
+.money {
+  font-family: monospace;
+  position: fixed;
+  top: 0%;
+}
+
+.mpc {
+  font-family: monospace;
+  position: fixed;
+  top: 5%;
+}
+
+.upgrade1 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 4%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade1:hover {
+  background-color: palegreen;
+}
+
+.upgrade2 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 28%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade2:hover {
+  background-color: palegreen;
+}
+
+.upgrade3 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 52%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade3:hover {
+  background-color: palegreen;
+}
+
+.upgrade4 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 76%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade4:hover {
+  background-color: palegreen;
+}
+
+.upgrade5 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 100%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade5:hover {
+  background-color: palegreen;
+}
+
+.upgrade6 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 124%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade6:hover {
+  background-color: palegreen;
+}
+
+.upgrade7 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 148%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade7:hover {
+  background-color: palegreen;
+}
+
+.upgrade8 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 172%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade8:hover {
+  background-color: palegreen;
+}
+
+.upgrade9 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 196%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade9:hover {
+  background-color: palegreen;
+}
+
+.upgrade10 {
+  background-color: lightgreen;
+  font-family: Comic Sans MS, Sans-Serif;
+  position: absolute;
+  left: 70%;
+  top: 220%;
+  width: 25%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.upgrade10:hover {
+  background-color: palegreen;
+}

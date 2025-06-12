@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title id="pageTitle">$0 - Clicker v1.1.7</title>
+  <link href="Assets/Mouse.png" rel="icon" type="image/png">
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <noscript><meta http-equiv="refresh" content="0;url=noscript.html" /></noscript>
+</head>
+
+<body>
+  <audio id="sound">
+    <source src="Assets/Sound.mp3" type="audio/mp3">
+  </audio>
+  <h1>
+    <p id="money">Money: $0</p>
+    <p id="mpc">Money Per Click: $1</p>
+    <p id="mps">Money Per Second: $0</p>
+  </h1>
+  <img class="Guy" onclick="Clicked()" src="Assets/Guy.png">
+  <h1 class="shopTitle">Shop</h1>
+  <button class="upgrade1" onclick="addcpc(1,100)">
+    <h2>+$1 Per Click<br>Cost: $100</h2>
+  </button>
+  <button class="upgrade2" onclick="addcps(1,500)">
+    <h2>+$1 Per Second<br>Cost: $500</h2>
+  </button>
+  <button class="upgrade3" onclick="addcpc(10,950)">
+    <h2>+$10 Per Click<br>Cost: $950</h2>
+  </button>
+  <button class="upgrade4" onclick="addcps(5,2375)">
+    <h2>+$5 Per Second<br>Cost: $2,375</h2>
+  </button>
+  <button class="upgrade5" onclick="addcpc(50,4500)">
+    <h2>+$50 Per Click<br>Cost: $4,500</h2>
+  </button>
+  <button class="upgrade6" onclick="addcps(10,4500)">
+    <h2>+$10 Per Second<br>Cost: $4,500</h2>
+  </button>
+  <button class="upgrade7" onclick="addcpc(100,8500)">
+    <h2>+$100 Per Click<br>Cost: $8,500</h2>
+  </button>
+  <button class="upgrade8" onclick="addcps(50,21250)">
+    <h2>+$50 Per Second<br>Cost: $21,250</h2>
+  </button>
+  <button class="upgrade9" onclick="addcpc(200,15000)">
+    <h2>+$200 Per Click<br>Cost: $15,000</h2>
+  </button>
+  <button class="upgrade10" onclick="addcps(100,38000)">
+    <h2>+$100 Per Second<br>Cost: $38,000</h2>
+  </button>
+  <button class="save" onclick="saveGame()">Save</button>
+  <button class="wipe" onclick="wipeSave()">Wipe Save</button>
+  <button class="export" onclick="window.prompt('Copy this and put it somewhere safe.', money + '|' + mpc + '|' + mps);">Export Save</button>
+  <button class="import" onclick="loadGame()">Import Save</button>
+  <script src="script.js"></script>
+  <button class="credits" onclick="window.open('credits.html');">Credits</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
