@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<center>
+			<button id="Set_Minimum" onclick="minimum = Set_Minimum()"><h1>Set Minimum</h1></button>
+			<button id="Set_Maximum" onclick="maximum = Set_Maximum()"><h1>Set Maximum</h1></button>
+		</center>
+		<center><button id="Generate" onclick="Generate()"><h1>Generate Random Number</h1></button></center>
+		<center><h1><p id="Random_Number"></p></h1></center>
+		<script>
+			let minimum;
+			let maximum;
+			function Set_Minimum() {
+				return parseInt(prompt("What do you want the minimum to be?",minimum));
+			}
+			function Set_Maximum() {
+				return parseInt(prompt("What do you want the maximum to be?",maximum));
+			}
+			function Generate() {
+				document.getElementById("Random_Number").innerHTML = Math.floor(Math.random() * (maximum - minimum + 1) ) + minimum;
+			}
+		</script>
+	</body>
+</html>

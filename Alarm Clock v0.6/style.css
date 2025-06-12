@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.time {
+  display: inline-block;
+  font-family: monospace;
+  background-color: #1F1F1F;
+  border: 5px inset #0F0F0F;
+  font-size: 50px;
+  color: red;
+  padding: 4.5px 10px;
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+.plastic {
+  border-radius: 5px;
+  background-color: black;
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  top: 25px;
+}
+
+.clock {
+  margin: auto;
+  width: 400px;
+}
+
+button {
+  background-color: black;
+  border-radius: 5px;
+  color: ghostwhite;
+  font-size: 10px;
+  position: relative;
+  width: 100px;
+  top: -165px;
+  border: 2px solid #1F1F1F;
+}
