@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <Title>DO NOT PRESS!!!</Title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+button {
+  border: 25px solid lightgray;
+  border-radius: 100px;
+  background: red;
+  color: white;
+  font-size: 25px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.message {
+  font-family: sans-serif;
+  font-size: 25px;
+}
+</style>
+</head>
+
+<body>
+  <button onclick="clicked()"><b>DO NOT PRESS</b></button>
+  <b>
+    <p class="message" id="message"></p>
+  </b>
+  <script>let pressed = false;
+function clicked() {
+  document.getElementById("message").innerHTML = "I told you not to press it!";
+  if (!pressed) {
+    setTimeout("rickroll()", 2000);
+  } else {
+    rickroll();
+  }
+}
+function rickroll() {
+  open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+  pressed = true;
+}
+</script>
+</body>
+
+</html>
