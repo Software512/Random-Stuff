@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #shapes,
+        #sides {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="download" download><canvas id="canvas" width="500" height="500"></canvas></a>
+    <div>
+        <label for="shapes">Shapes</label>
+        <br>
+        <label for="shapes" id="shapesCounter">20</label>
+        <br>
+        <input id="shapes" type="range" min="3" max="100" value="20" />
+    </div>
+    <br>
+    <div>
+        <label for="sides">Sides</label>
+        <br>
+        <label for="sides" id="sidesCounter">20</label>
+        <br>
+        <input id="sides" type="range" min="3" max="25" value="20" />
+    </div>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        var pen;
+        var shapes = 20;
+        var sides = 20;
+
+        function draw() {
+            ctx.reset();
+            pen = { x: canvas.width / 2, y: canvas.height / 2, direction: 0.5 * Math.PI };
+            ctx.moveTo(pen.x, pen.y);
+            for (let i = 0; i < shapes; i++) {
+                for (let i = 0; i < sides; i++) {
+                    pen.x += Math.sin(pen.direction) * canvas.width / sides;
+                    pen.y += Math.cos(pen.direction) * canvas.height / sides;
+                    ctx.lineTo(pen.x, pen.y);
+                    pen.direction = (pen.direction + (2 * Math.PI / sides)) % (2 * Math.PI);
+                }
+                pen.direction = (pen.direction + (2 * Math.PI / shapes)) % (2 * Math.PI);
+            }
+            ctx.stroke();
+            document.getElementById("download").href = canvas.toDataURL("image/png");
+        }
+
+        document.getElementById("shapes").addEventListener("input", () => {
+            shapes = document.getElementById("shapes").value;
+            document.getElementById("shapesCounter").innerHTML = shapes;
+            draw();
+        });
+        document.getElementById("sides").addEventListener("input", () => {
+            sides = document.getElementById("sides").value;
+            document.getElementById("sidesCounter").innerHTML = sides;
+            draw();
+        });
+
+        function resize() {
+            if (window.innerWidth > window.innerHeight) {
+                canvas.width = window.innerHeight * 0.75;
+                canvas.height = window.innerHeight * 0.75;
+            } else {
+                canvas.width = window.innerWidth * 0.75;
+                canvas.height = window.innerWidth * 0.75;
+            }
+            draw();
+        }
+
+        addEventListener("resize", resize);
+
+        resize();
+        draw();
+    </script>
+</body>
+
+</html>
